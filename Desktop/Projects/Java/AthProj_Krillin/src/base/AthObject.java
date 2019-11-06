@@ -2,7 +2,7 @@ package base;
 
 public class AthObject 
 {
-	String name,desc;
+	public String name,desc;
 	Stat[] stats;
 	private int id;
 	
@@ -27,6 +27,12 @@ public class AthObject
 		this(name, desc, new Stat("",0));
 	}
 	
+	// Bare Label (Equipment)
+	public AthObject(String name, String desc, String attackDie)
+	{
+		this(name, desc + " * "+ attackDie, new Stat("",0));
+	}
+		
 	public String getName()
 	{
 		return name;
@@ -35,5 +41,11 @@ public class AthObject
 	public int getId()
 	{
 		return id;
+	}
+	
+	// 
+	public String toString()
+	{
+		return this.name + "\n	" + this.desc;
 	}
 }

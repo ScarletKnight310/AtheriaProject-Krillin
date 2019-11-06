@@ -9,8 +9,15 @@ public class Genders extends AthContentList
 		super(base);
 	}
 	
+	//
 	public void addGender(AthObject addon)
 	{
-		contentList.add(addon);
+		content.add(addon);
+	}
+	
+	//
+	public AthObject getGender(int i) 
+	{
+		return content.get(i);
 	}
 }

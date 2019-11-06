@@ -9,8 +9,15 @@ public class Jobs extends AthContentList
 		super(base);
 	}
 	
+	//
 	public void addJob(AthObject addon)
 	{
-		contentList.add(addon);
+		content.add(addon);
+	}
+	
+	//
+	public AthObject getJob(int i) 
+	{
+		return content.get(i);
 	}
 }

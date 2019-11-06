@@ -11,13 +11,20 @@ public class Traits extends AthContentList
 	public Traits(AthObject[] baseContent, Integer[] balScore)
 	{
 		super(baseContent);
-		balScores = (ArrayList<Integer>) Arrays.asList(balScore); 
+		balScores = new ArrayList<Integer> (Arrays.asList(balScore)); 
 	}
 	
+	//
 	public void addTrait(AthObject addon, int balScore)
 	{
-		contentList.add(addon);
+		content.add(addon);
 		balScores.add(balScore);
+	}
+	
+	//
+	public AthObject getTrait(int i) 
+	{
+		return content.get(i);
 	}
 	
 	public int getBalScore(int i)

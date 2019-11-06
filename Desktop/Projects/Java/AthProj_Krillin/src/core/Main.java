@@ -1,15 +1,17 @@
 package core;
 
-// import content.*;
 import base.*;
 
 public class Main 
 {
-
+	public static Core core = new Core(true);
+	
 	public static void main(String[] args) 
 	{
-		Core.genders.addGender(new AthObject("test",""));
-		//System.out.print(core.genders.getAthObject(0));
+		// tweaked Stat class 
+		
+		core.genders.addGender(new AthObject("test",""));
+		System.out.print(core.genders.getGender(0).name);
 	}
 
 }

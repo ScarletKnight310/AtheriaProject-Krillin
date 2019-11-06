@@ -2,7 +2,7 @@ package base;
 
 public class Stat 
 {
-	private String name, desc;
+	public String name, desc;
 
 	private int bonus;
 	private int mod;
@@ -44,7 +44,7 @@ public class Stat
 		}
 	}
 	
-	// Setter/ Modification
+	//
 	private void changeBonus(int change)
 	{
 		this.bonus = change;
@@ -57,17 +57,7 @@ public class Stat
 			changeBonus(this.bonus + change);
 	}
 	
-	// Getters
-	public String getName()
-	{
-		return this.name;
-	}
-	
-	public String getDesc()
-	{
-		return this.desc;
-	}
-	
+	// 
 	public int getBonus()
 	{
 		return this.bonus;
@@ -81,5 +71,15 @@ public class Stat
 	public int getId()
 	{
 		return this.id;
+	}
+	
+	//
+	public String toString()
+	{
+		
+		if(isTemp)
+			return name + " - " + bonus;
+		
+		return name + "  " + bonus + " -> " + mod;
 	}
 }

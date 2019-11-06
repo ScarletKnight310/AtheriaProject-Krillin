@@ -2,20 +2,24 @@ package content;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import base.AthObject;
+import base.*;
 
 public abstract class AthContentList
 {
-	protected ArrayList <AthObject> contentList;
-
+	protected ArrayList <AthObject> content;
+	
 	public AthContentList(AthObject[] baseContent) 
 	{
-		contentList = (ArrayList <AthObject>) Arrays.asList(baseContent);
+		content = new ArrayList<AthObject>(Arrays.asList(baseContent));
 	}
 	
-	public AthObject getAthObject(int i) 
+	protected ArrayList<ArrayList<AthObject>> to2dArrayList(AthObject[][] arr2d) 
 	{
-		return contentList.get(i);
+		ArrayList<ArrayList<AthObject>> result = new ArrayList<>();
+		for(int i = 0; i < arr2d.length; i++)
+		{
+			result.add(new ArrayList<AthObject>(Arrays.asList(arr2d[i])));
+		}
+		return result;
 	}
-
 }

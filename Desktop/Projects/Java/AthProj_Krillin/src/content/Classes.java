@@ -11,13 +11,20 @@ public class Classes extends AthContentList
 	public Classes(AthObject[] base, AbilityScores[] abiLevels) 
 	{
 		super(base);
-		abilityLvls = (ArrayList<AbilityScores>)Arrays.asList(abiLevels);
+		abilityLvls = new ArrayList<AbilityScores>(Arrays.asList(abiLevels));
 	}
 	
+	//
 	public void addClass(AthObject cl,AbilityScores as)
 	{
-		contentList.add(cl);
+		content.add(cl);
 		this.abilityLvls.add(as);
+	}
+	
+	//
+	public AthObject getClass(int i) 
+	{
+		return content.get(i);
 	}
 	
 	public AbilityScores getClassAL(int i)

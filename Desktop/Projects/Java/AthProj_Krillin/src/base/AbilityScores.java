@@ -9,20 +9,14 @@ public class AbilityScores
 	// Magical or Mystical Knowledge (Wisdom)
 	private int Mystical = 0;
 	
-	// Class Score Limits
-	private static int Limit = 5;
-	
 	public AbilityScores(int Martial, int Technical, int Mystical)
 	{
-		if(Martial + Technical + Mystical == Limit)
-		{
 			this.Martial = Martial;
 			this.Technical = Technical;
 			this.Mystical = Mystical;
-		}
-		// Handle mal stuff
 	}
 	
+	//
 	public int getMartialScore()
 	{
 		return this.Martial;
@@ -37,4 +31,11 @@ public class AbilityScores
 	{
 		return this.Mystical;
 	}
+	
+	//
+	public String toString()
+	{
+		return "Martial - lvl "+ this.Martial + ", Technical - lvl "+ this.Technical + ", Mystical - lvl "+ this.Mystical;
+	}
+	
 }

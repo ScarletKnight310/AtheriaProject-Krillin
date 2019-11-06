@@ -2,7 +2,7 @@ package content;
 
 import base.*;
 
-// Upbringings
+// Upbringing
 public class Origins extends AthContentList
 {
 	public Origins(AthObject[] base) 
@@ -10,8 +10,15 @@ public class Origins extends AthContentList
 		super(base);
 	}
 	
+	//
 	public void addOrigin(AthObject addon)
 	{
-		contentList.add(addon);
+		content.add(addon);
+	}
+	
+	//
+	public AthObject getOrigin(int i) 
+	{
+		return content.get(i);
 	}
 }
