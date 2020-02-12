@@ -7,6 +7,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -19,6 +26,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\k1aar\OneDrive\Desktop\Projects\Java\AtheriaProject-Krillin\AthProj_Krillin\src\content" />
+      <recent name="C:\Users\k1aar\OneDrive\Desktop\Projects\Java\AtheriaProject-Krillin\AthProj_Krillin\src" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -51,25 +64,34 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1431" height="224" key="GridCell.Tab.0.bottom" timestamp="1581442656763">
+    <state width="1431" height="229" key="GridCell.Tab.0.bottom" timestamp="1581450813097">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state width="1431" height="224" key="GridCell.Tab.0.bottom/62.0.1474.864@62.0.1474.864" timestamp="1581442656763" />
-    <state width="1431" height="224" key="GridCell.Tab.0.center" timestamp="1581442656762">
+    <state width="1431" height="229" key="GridCell.Tab.0.bottom/62.0.1474.864/-1858.0.1858.1080@62.0.1474.864" timestamp="1581450813097" />
+    <state width="1431" height="229" key="GridCell.Tab.0.bottom/62.0.1474.864@62.0.1474.864" timestamp="1581446940639" />
+    <state width="1431" height="229" key="GridCell.Tab.0.center" timestamp="1581450813097">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state width="1431" height="224" key="GridCell.Tab.0.center/62.0.1474.864@62.0.1474.864" timestamp="1581442656762" />
-    <state width="1431" height="224" key="GridCell.Tab.0.left" timestamp="1581442656762">
+    <state width="1431" height="229" key="GridCell.Tab.0.center/62.0.1474.864/-1858.0.1858.1080@62.0.1474.864" timestamp="1581450813097" />
+    <state width="1431" height="229" key="GridCell.Tab.0.center/62.0.1474.864@62.0.1474.864" timestamp="1581446940639" />
+    <state width="1431" height="229" key="GridCell.Tab.0.left" timestamp="1581450813097">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state width="1431" height="224" key="GridCell.Tab.0.left/62.0.1474.864@62.0.1474.864" timestamp="1581442656762" />
-    <state width="1431" height="224" key="GridCell.Tab.0.right" timestamp="1581442656762">
+    <state width="1431" height="229" key="GridCell.Tab.0.left/62.0.1474.864/-1858.0.1858.1080@62.0.1474.864" timestamp="1581450813097" />
+    <state width="1431" height="229" key="GridCell.Tab.0.left/62.0.1474.864@62.0.1474.864" timestamp="1581446940639" />
+    <state width="1431" height="229" key="GridCell.Tab.0.right" timestamp="1581450813097">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state width="1431" height="224" key="GridCell.Tab.0.right/62.0.1474.864@62.0.1474.864" timestamp="1581442656762" />
-    <state x="496" y="258" key="com.intellij.ide.util.TipDialog" timestamp="1581443559595">
+    <state width="1431" height="229" key="GridCell.Tab.0.right/62.0.1474.864/-1858.0.1858.1080@62.0.1474.864" timestamp="1581450813097" />
+    <state width="1431" height="229" key="GridCell.Tab.0.right/62.0.1474.864@62.0.1474.864" timestamp="1581446940639" />
+    <state x="496" y="258" key="com.intellij.ide.util.TipDialog" timestamp="1581495357285">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
+    <state x="496" y="258" key="com.intellij.ide.util.TipDialog/62.0.1474.864/-1858.0.1858.1080@62.0.1474.864" timestamp="1581495357285" />
     <state x="496" y="258" key="com.intellij.ide.util.TipDialog/62.0.1474.864@62.0.1474.864" timestamp="1581443559595" />
+    <state x="240" y="54" key="new project wizard" timestamp="1581495403908">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="240" y="54" key="new project wizard/62.0.1474.864/-1858.0.1858.1080@62.0.1474.864" timestamp="1581495403908" />
   </component>
 </project>

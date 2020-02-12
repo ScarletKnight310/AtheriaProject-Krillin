@@ -2,7 +2,7 @@ package content;
 
 import base.*;
 
-public class Jobs extends AthContentList
+public class Jobs extends AthContentList<AthObject>
 {
 	public Jobs(AthObject[] base) 
 	{

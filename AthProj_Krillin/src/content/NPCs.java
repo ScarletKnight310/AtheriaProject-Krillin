@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import base.*;
 
 
-public class NPCs extends AthContentList
+public class NPCs extends AthContentList<AthObject>
 {
 	ArrayList<ArrayList<AthObject>> npcs;
 	

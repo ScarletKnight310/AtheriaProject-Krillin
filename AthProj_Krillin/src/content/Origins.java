@@ -3,7 +3,7 @@ package content;
 import base.*;
 
 // Upbringing
-public class Origins extends AthContentList
+public class Origins extends AthContentList<AthObject>
 {
 	public Origins(AthObject[] base) 
 	{

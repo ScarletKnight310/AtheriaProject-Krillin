@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import base.AthObject;
 
-public class Traits extends AthContentList
+public class Traits extends AthContentList<AthObject>
 {
 	private ArrayList<Integer> balScores;
 	

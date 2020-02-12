@@ -12,6 +12,7 @@ public class Core
 	public Origins origins;
 	public Jobs jobs;
 	public Traits traits;
+	public Equipment equipment;
 	// equipment
 	
 	public Core(boolean AtheriaDef) 
@@ -19,7 +20,99 @@ public class Core
 		if(AtheriaDef)
 		{	
 			// inti equipment
-			
+			equipment = new Equipment(new AthObject[][]{
+					new AthObject[]{
+							// Snipers
+							new AthObject("Springfield","5 round; Bolt-Action Sniper","dam - 1 d8"),
+							new AthObject("Lee-Enfield","10 round; Bolt-Action Sniper","dam - 1 d10"),
+							new AthObject("Karabiner 98k","10 round; Semi-Auto Sniper","dam - 2 d6"),
+							new AthObject("Mosin Nagant","5 round; Bolt-Action Sniper","dam - 1 d12 + 2"),
+							// Shotguns
+							new AthObject("Double-Barreled Shotgun","2 round; Shotgun","Dam 1 d6"),
+							new AthObject("M30 Luftwaffe Drilling","2 round; Shotgun","Dam 1d6 (shoot once) / 1d8 + 2 (shoot twice)"),
+							new AthObject("M1897 Trench Gun","6 round; Shotgun","Dam 1d6 (shoot once) / 1d8 + 1 (shoot twice)/ 1d10 + 2 (shoot thrice)"),
+							new AthObject("Toggle Action","9 round; Shotgun","Dam 1d8 (shoot once) / 1d10 + 1 (shoot twice) / 1d12 + 2 (shoot thrice)"),
+							// Rifles
+							new AthObject("M1 Garand","8 round; Semi-Auto Rifle",""),
+							new AthObject("Gewehr 43","10 round; Semi-Auto Rifle",""),
+							new AthObject("M1941","25 round; Auto Rifle",""),
+							new AthObject("STG - 44","30 round; Auto Rifle",""),
+							// Sub Machine
+							new AthObject("Type 100","30 round; Auto Sub-Machine",""),
+							new AthObject("Beretta M1938A","30 round; Auto Sub-Machine",""),
+							new AthObject("PPsh 41","71 round; Auto Sub-Machine",""),
+							new AthObject("MP40","32 round; Auto Sub-Machine",""),
+							// LMGs
+							new AthObject("BAR","20 round; Auto LMG",""),
+							new AthObject("Bren","30 round; Auto LMG",""),
+							new AthObject("MG 15","75 round; Full-Auto LMG",""),
+							new AthObject("Lewis","47 round; Auto LMG",""),
+							// pistols
+							new AthObject("M1911","7 round; Semi-Auto Pistol",""),
+							new AthObject("Walther p38","8 round; Semi-Auto Pistol",""),
+							new AthObject("Luger","8 round; Semi-Auto Pistol",""),
+							new AthObject("Enfield No 2","6 round; Semi-Auto Pistol",""),
+							// bows
+							new AthObject("Short Bow","Bow",""),
+							new AthObject("Longbow","Bow",""),
+							new AthObject("Crossbow","Bow",""),}
+					},// Range
+					new AthObject[]{
+							// Blades
+							new AthObject("Scimitar","Blade",""),
+							new AthObject("Falchion","Blade",""),
+							new AthObject("Ulfberht","Blade",""),
+							new AthObject("Rapier","Blade",""),
+							new AthObject("Katana","Blade",""),
+							new AthObject("Bastard Sword","Blade",""),
+							new AthObject("Claymore","Blade",""),
+							// Axes
+							new AthObject("Battle Axe","Axe",""),
+							new AthObject("Tomahawk","Axe",""),
+							new AthObject("Hatchet","Axe",""),
+							new AthObject("Great Axe","Axe",""),
+							// Blunt
+							new AthObject("Morning Star","Blunt",""),
+							new AthObject("Mace","Blunt",""),
+							new AthObject("Flail","Blunt",""),
+							new AthObject("Quarterstaff","Blunt",""),
+							new AthObject("Great Hammer","Blunt",""),
+							// Shield
+							new AthObject("Buckler","Shield",""),
+							new AthObject("Celtic","Shield",""),
+							new AthObject("Heater","Shield",""),
+							new AthObject("Parama","Shield",""),
+							new AthObject("Suctum","Shield",""),
+							new AthObject("Kite","Shield",""),
+							// Pole Arms
+							new AthObject("Spear","Pole-Arm",""),
+							new AthObject("Halberd","Pole-Arm",""),
+							new AthObject("Glaive","Pole-Arm",""),
+							new AthObject("Naginata","Pole-Arm",""),
+							new AthObject("Guandao","Pole-Arm",""),
+							// Daggers
+							new AthObject("Dagger","Dagger",""),
+							new AthObject("Kukri","Dagger",""),
+							new AthObject("Katar","Dagger",""),
+							new AthObject("Sai","Dagger",""),
+					},// Melee
+					new AthObject[]{
+							// Sp FireArms
+							new AthObject("Flamethrower", " SpR", ""),
+							new AthObject("M1 Bazooka", " SpR", ""),
+							new AthObject("Clayton 99 ", "23 round; Bolt Action SpR", "Arch Lightning"),
+							new AthObject("Krager 13", "6 round; Semi-Auto SpR", ""),
+							// Sp Melee
+							new AthObject("Chakram", " SpM", ""),
+							new AthObject("Battle Blade", " SpM", ""),
+							new AthObject("Bat'leth", " SpM", ""),
+							new AthObject("Chainsword", " SpM", ""),
+							// Magic
+							new AthObject("Wand", "What a wand is made of, as well as the magic that is released from it, is dependent on its element(Single-Handed); Magic", ""),
+							new AthObject("Staff", "What a staff is made of, as well as the magic that is released from it, is dependent on its element(Two-Handed); Magic", "")},// Special
+					new AthObject[]{},// Armor
+					new AthObject[]{}},// Custom
+					new Integer[]{0});
 			
 			// inti traits
 			traits = new Traits(new AthObject[]

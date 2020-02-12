@@ -3,7 +3,7 @@ package base;
 public class AthObject 
 {
 	public String name,desc;
-	Stat[] stats;
+	private Stat[] stats;
 	private int id;
 	
 	// Label with Temp Stats
@@ -47,5 +47,10 @@ public class AthObject
 	public String toString()
 	{
 		return this.name + "\n	" + this.desc;
+	}
+
+	public Stat[] getStats()
+	{
+		return stats;
 	}
 }

@@ -4,21 +4,21 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import base.*;
 
-public abstract class AthContentList
+public abstract class AthContentList<T>
 {
-	protected ArrayList <AthObject> content;
+	protected ArrayList <T> content;
 	
-	public AthContentList(AthObject[] baseContent) 
+	public AthContentList(T[] baseContent)
 	{
-		content = new ArrayList<AthObject>(Arrays.asList(baseContent));
+		content = new ArrayList<T>(Arrays.asList(baseContent));
 	}
 	
-	protected ArrayList<ArrayList<AthObject>> to2dArrayList(AthObject[][] arr2d) 
+	protected <I> ArrayList<ArrayList<I>> to2dArrayList(I[][] arr2d)
 	{
-		ArrayList<ArrayList<AthObject>> result = new ArrayList<>();
+		ArrayList<ArrayList<I>> result = new ArrayList<>();
 		for(int i = 0; i < arr2d.length; i++)
 		{
-			result.add(new ArrayList<AthObject>(Arrays.asList(arr2d[i])));
+			result.add(new ArrayList<I>(Arrays.asList(arr2d[i])));
 		}
 		return result;
 	}

@@ -3,7 +3,7 @@ package content;
 import java.util.ArrayList;
 import base.*;
 
-public class Races extends AthContentList
+public class Races extends AthContentList<AthObject>
 {
 	private ArrayList<ArrayList<AthObject>> subRaces;
 	

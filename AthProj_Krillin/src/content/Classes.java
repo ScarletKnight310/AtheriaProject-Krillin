@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import base.*;
 
-public class Classes extends AthContentList
+public class Classes extends AthContentList<AthObject>
 {
 	private ArrayList<AbilityScores> abilityLvls;
 	

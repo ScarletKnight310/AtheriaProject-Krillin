@@ -4,18 +4,18 @@ import java.util.HashMap;
 
 import base.*;
 
-public class AthCharacter 
+public class AthCharacter
 {
-	public HashMap<String,Stat> stats = new HashMap<>(); 
-	public HashMap<Character, AthObject> status_Being = new HashMap<>(); 
+	public HashMap<String,Stat> stats = new HashMap<>();
+	public HashMap<Character, AthObject> status_Being = new HashMap<>();
 	public Status status_Current;
 	public Inventory inv;
-	
+
 	private String name = "Nemo Nihil";
 	private String header;
 	private String background;
-	
-	public AthCharacter(String name, AthObject[] stat_B) 
+
+	public AthCharacter(AthObject[] stat_B)
 	{
 		// stats
 		stats.put("STR",new Stat("STR","Physical strength and damage with melee weapons."));//0
@@ -37,12 +37,19 @@ public class AthCharacter
 		status_Being.put('d',stat_B[5]);
 		status_Being.put('o',stat_B[6]);
 		// status current
-		inv = new Inventory();	
+		inv = new Inventory();
 		// moving observed stats 
 		status_Current = new Status(stats.get("CON"),stats.get("CAS"));
 		// Update to base
 		updateAllStats();
 		update();
+	}
+
+	public AthCharacter(String name, AthObject[] stat_B)
+	{
+		this(stat_B);
+		this.name = name;
+		updateHeader();
 	}
 	
 	// update methods
@@ -64,12 +71,13 @@ public class AthCharacter
 		str.append("\nClass/Last Occ: ").append(status_Being.get('c').name).append(" / ").append(status_Being.get('j').name);
 		str.append("\nUpbringing: ").append(status_Being.get('o').name);
 		str.append("\nGod: ").append(status_Being.get('d').name);
+		background = str.toString();
 	}
 	
 	private void updateAllStats()
 	{
 		status_Being.forEach((k,v) ->{
-			for(Stat s: v.stats)
+			for(Stat s: v.getStats())
 			{
 				// the current background object single stat
 				updateStat(s);
@@ -79,7 +87,13 @@ public class AthCharacter
 	
 	public void updateStat(Stat s)
 	{
-		stats.get(s.name).modifyBonus(s.getBonus());;
+		try {
+			stats.get(s.name).modifyBonus(s.getBonus());
+		}
+		catch(NullPointerException e)
+		{
+			//System.out.println("Problem");
+		}
 	}
 	
 	// getting extra obj

@@ -2,7 +2,7 @@ package content;
 
 import base.*;
 
-public class Genders extends AthContentList
+public class Genders extends AthContentList<AthObject>
 {
 	public Genders(AthObject[] base) 
 	{

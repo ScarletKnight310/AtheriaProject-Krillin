@@ -1,6 +1,7 @@
 package core;
 
 import base.*;
+import character.AthCharacter;
 
 public class Main 
 {
@@ -8,10 +9,20 @@ public class Main
 	
 	public static void main(String[] args) 
 	{
-		// tweaked Stat class 
-		
-		core.genders.addGender(new AthObject("test",""));
-		System.out.print(core.genders.getGender(0).name);
+//		core.genders.addGender(new AthObject("test",""));
+//		System.out.println(core.genders.getGender(3).name);
+
+		AthCharacter test = new AthCharacter("Alto", new AthObject[]{
+				core.genders.getGender(0),
+				core.races.getRace(2),
+				core.races.getSubRace(2,5),
+				core.classes.getClass(0),
+				core.jobs.getJob(0),
+				core.npcs.getGodNPC(0),
+				core.origins.getOrigin(4)});
+
+		System.out.println(test.getHeader());
+		System.out.println("\n" + test.getBackground());
 	}
 
 }
