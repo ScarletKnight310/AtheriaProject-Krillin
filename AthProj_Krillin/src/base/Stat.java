@@ -76,7 +76,6 @@ public class Stat
 	//
 	public String toString()
 	{
-		
 		if(isTemp)
 			return name + " - " + bonus;
 		

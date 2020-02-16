@@ -31,5 +31,4 @@ public class Traits extends AthContentList<AthObject>
 	{
 		return balScores.get(i);
 	}
-
 }

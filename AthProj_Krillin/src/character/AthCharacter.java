@@ -14,6 +14,7 @@ public class AthCharacter
 	private String name = "Nemo Nihil";
 	private String header;
 	private String background;
+	private String stats_display;
 
 	public AthCharacter(AthObject[] stat_B)
 	{
@@ -57,6 +58,7 @@ public class AthCharacter
 	{
 		updateHeader();
 		updateBackground();
+		updateStatDisplay();
 	}
 	
 	public void updateHeader()
@@ -73,7 +75,16 @@ public class AthCharacter
 		str.append("\nGod: ").append(status_Being.get('d').name);
 		background = str.toString();
 	}
-	
+
+	public void updateStatDisplay()
+	{
+		StringBuilder str = new StringBuilder("Stats:\n");
+		stats.forEach((k,v) ->{
+			str.append(k).append(" ").append(v.getBonus()).append(" -> ").append(v.getMod()).append("\n");
+		});
+		stats_display = str.toString();
+	}
+
 	private void updateAllStats()
 	{
 		status_Being.forEach((k,v) ->{
@@ -95,7 +106,7 @@ public class AthCharacter
 			//System.out.println("Problem");
 		}
 	}
-	
+
 	// getting extra obj
 	public String getHeader()
 	{
@@ -105,5 +116,10 @@ public class AthCharacter
 	public String getBackground()
 	{
 		return background;
+	}
+
+	public String getStats()
+	{
+		return stats_display;
 	}
 }

@@ -22,4 +22,14 @@ public abstract class AthContentList<T>
 		}
 		return result;
 	}
+
+	public String ContentToString()
+	{
+		StringBuilder str = new StringBuilder();
+		for(T current:content)
+		{
+			str.append(current.toString()).append("\n");
+		}
+		return str.toString();
+	}
 }

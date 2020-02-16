@@ -45,4 +45,27 @@ public class Races extends AthContentList<AthObject>
 	{
 		return subRaces.get(race).get(subrace);
 	}
+
+	@Override
+	public String ContentToString() {
+		StringBuilder str = new StringBuilder();
+		for(AthObject c: content)
+		{
+			str.append(c.toString()).append("\n");
+		}
+		str.append("---------------------------------------------------").append("\n");
+		for(ArrayList<AthObject> layer: subRaces)
+		{
+			for(AthObject c: layer)
+			{
+				try{
+					str.append(c.toString()).append("\n");
+				}
+				catch (NullPointerException e)
+				{
+				}
+			}
+		}
+		return str.toString();
+	}
 }

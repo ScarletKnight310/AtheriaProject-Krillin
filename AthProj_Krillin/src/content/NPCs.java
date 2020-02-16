@@ -46,4 +46,5 @@ public class NPCs extends AthContentList<AthObject>
 	{
 		return getNPC(1,i);
 	}
+
 }

@@ -21,8 +21,13 @@ public class Main
 				core.npcs.getGodNPC(0),
 				core.origins.getOrigin(4)});
 
-		System.out.println(test.getHeader());
-		System.out.println("\n" + test.getBackground());
+//		System.out.println(test.getHeader());
+//		System.out.println(test.getBackground());
+//		test.inv.addItem(core.equipment.getMeleeWeapon(24));
+//		System.out.println(test.inv.toString());
+//		System.out.println(test.status_Current.toString());
+//		System.out.println(test.getStats());
+		System.out.println(core.toString());
 	}
 
 }

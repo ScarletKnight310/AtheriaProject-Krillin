@@ -55,8 +55,7 @@ public class Core
 							// bows
 							new AthObject("Short Bow","Bow",""),
 							new AthObject("Longbow","Bow",""),
-							new AthObject("Crossbow","Bow",""),}
-					},// Range
+							new AthObject("Crossbow","Bow","")},// Range
 					new AthObject[]{
 							// Blades
 							new AthObject("Scimitar","Blade",""),
@@ -94,8 +93,7 @@ public class Core
 							new AthObject("Dagger","Dagger",""),
 							new AthObject("Kukri","Dagger",""),
 							new AthObject("Katar","Dagger",""),
-							new AthObject("Sai","Dagger",""),
-					},// Melee
+							new AthObject("Sai","Dagger",""),},// Melee
 					new AthObject[]{
 							// Sp FireArms
 							new AthObject("Flamethrower", " SpR", ""),
@@ -110,9 +108,42 @@ public class Core
 							// Magic
 							new AthObject("Wand", "What a wand is made of, as well as the magic that is released from it, is dependent on its element(Single-Handed); Magic", ""),
 							new AthObject("Staff", "What a staff is made of, as well as the magic that is released from it, is dependent on its element(Two-Handed); Magic", "")},// Special
-					new AthObject[]{},// Armor
-					new AthObject[]{}},// Custom
-					new Integer[]{0});
+					new AthObject[]{
+							new AthObject("Enhancement","Armor",
+									new Stat("ANY",5)),
+							new AthObject("Light Armor","Armor",
+									new Stat[]{ new Stat("SPD",2),new Stat("CON",1)}),
+							new AthObject("Medium Armor","Armor",
+									new Stat[]{new Stat("CON",3),new Stat("SPD",1)}),
+							new AthObject("Heavy Armor","Armor",
+									new Stat[]{new Stat("CON",4),new Stat("DEX",1)}),
+							new AthObject("Robes","Armor",
+									new Stat[]{new Stat("INT",2),new Stat("SPD",1)}),
+							new AthObject("Cloth","Armor",
+									new Stat("SPD",2)),
+							new AthObject("Suit Armor","Armor",
+									new Stat("CON",6))}},// Armor
+					new Integer[]{//Range
+							500,700,1000,1200,
+							500,700,120,1500,
+							700,1200,1500,2000,
+							700,1200,1500,1800,
+							1200,1500,2000,2100,
+							100,150,200,250,
+							800,1200,1600,
+							// Melee
+							200,250,300,400,500,800,1200,
+							300,400,500,600,
+							200,300,500,800,1000,
+							100,200,300,500,800,1000,
+							800,1200,1500,1800,2000,
+							50,100,150,200,
+							// Special
+							1800,1800,2800,2500,
+							2500,2800,2000,2500,
+							1500,2000,
+							// Armor
+							2600,1000,1500,2000,600,0,2300});
 			
 			// inti traits
 			traits = new Traits(new AthObject[]
@@ -899,4 +930,25 @@ public class Core
 		}
 	}
 
+	@Override
+	public String toString() {
+		StringBuilder str = new StringBuilder("Core:---------------------------------------------").append("\n");
+		str.append("Genders---------------------------------").append("\n");
+		str.append(genders.ContentToString()).append("\n");
+		str.append("Races and SubRaces---------------------------------").append("\n");
+		str.append(races.ContentToString()).append("\n");
+		str.append("Classes---------------------------------").append("\n");
+		str.append(classes.ContentToString()).append("\n");
+		str.append("Gods---------------------------------").append("\n");
+		str.append(npcs.ContentToString()).append("\n");
+		str.append("Origins---------------------------------").append("\n");
+		str.append(origins.ContentToString()).append("\n");
+		str.append("Jobs---------------------------------").append("\n");
+		str.append(jobs.ContentToString()).append("\n");
+		str.append("Traits---------------------------------").append("\n");
+		str.append(traits.ContentToString()).append("\n");
+		str.append("Equipment---------------------------------").append("\n");
+		str.append(equipment.ContentToString()).append("\n");
+		return str.toString();
+	}
 }
